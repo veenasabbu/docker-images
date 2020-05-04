@@ -1,9 +1,5 @@
 ---
 - hosts: prod
   tasts:
-          - name: pull docker images form registry
-            raw: docker pull veenadevops/mydevops:1.0
-          
-          - name: bringup container
-            raw: docker run -dti --name webapp -p 80:80 veenadevops/mydevops:1.0 /bin/bash
-
+          - name: depoly webapp into qa server
+            copy: src=/var/lib/jenkins/workspace/cicd/index.html dest=/var/www/html
