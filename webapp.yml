@@ -1,5 +1,5 @@
 ---
 - hosts: prod
-  tasts:
+  tasks:
           - name: depoly webapp into qa server
             copy: src=/var/lib/jenkins/workspace/cicd/index.html dest=/var/www/html
